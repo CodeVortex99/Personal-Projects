@@ -1,0 +1,92 @@
+Collections: 
+    -> single variable used to store multiple values.
+    -> Iterable using for loops to access individua items/elements.
+
+    -> To know the properties of something:
+        -> Either User dir(collection/variable/function) or 
+            help(collection/variable/function) function
+        -> Then it needs to be printed.
+
+
+    List:
+
+        -> [] ordered and changeable.
+        -> Duplicates are allowed.
+
+        -> To access a certain element:
+            -> Use the Index Operator
+            -> variable[index]
+                -> Index starts from 0.
+            
+            "If the index is out of lists' range:
+                -> Error:
+                    -> IndexError: list index out of range
+
+            variable[:index] -> can be used to print every element up to the 
+                certain index.
+
+            Steps:
+                variable[::n] -> can be used to access every nth element from the
+                    0 index.
+
+                variable[::-n] -> can be used to reverse the list.
+
+            -> len() can be used to find the length of the collection/list.
+
+            -> We can find if a value is within the collection through the use
+                of 'in' function.
+                -> For Example: print("element" in variable of collection)
+                    -> will output a boolean which can be either used for validation
+                         or iteration purposes.
+
+    Set:
+
+        -> {} unordered and immutable, but ADD/Remove OK.
+        -> Duplicates not allowed.
+
+    Tuples:
+
+        -> () Ordered and unchangeable.
+        -> Duplicates allows.
+        -> Faster.
+
+    Dictionaries:
+
+        -> A collection of {key:value} pairs ordered and changeable
+        -> No Duplicates
+
+        -> Each key-value pair needs to be seperated by a comma
+        
+        -> variable.get("key") can be used to access the value of the key.
+            -> It can either be printed or used within conditional statements for validation.
+
+        -> using variable.update({"key": "value"})
+            -> new key-value pair can be added to the dictionary.
+            -> the existing key-value pair can also be changed/updated
+
+        -> variable.pop("key")
+            -> can be used to remove a key-value pair from the dictionary.
+            -> variable.popitem() will remove the latest key-value pair/item from the dictionary
+
+        -> variable.clear() will remove every key-value pair from the dictionary.
+
+        -> variable.keys() can be used to get a list of object of all the keys
+            in the dictionary without their values.
+
+        -> variable.values() can be used to get a list of object of all the values
+            in the dictionary without their keys.
+
+            -> it is better to assign the variable.keys() or variable.values() to a variable
+                and then printing the variable.
+
+        -> Dictionaries are iterable so, you can print out each seperate key/value 
+            using a for loop.
+
+        -> variable.items() can be used to resemble a dictionary object
+            out a 2D list of tuples.
+            
+            -> Furthermore, FOR Loop can be used again to lay out the 
+                dictionary in a visually pleasing method, for example:
+
+                -> for key, value in variable.items():
+                        print(f"{key}: {value}")
