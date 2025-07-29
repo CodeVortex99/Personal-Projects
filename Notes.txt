@@ -138,3 +138,6 @@ Collections:
 
                 -> for key, value in variable.items():
                         print(f"{key}: {value}")
+
+If I want to check if any of the elements in a certain list is in the Input:
+    -> if any(item in list for item in Input): ...
