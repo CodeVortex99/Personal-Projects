@@ -38,17 +38,65 @@ Collections:
                 -> For Example: print("element" in variable of collection)
                     -> will output a boolean which can be either used for validation
                          or iteration purposes.
+                -> This applies to Sets and Tuples
+
+            -> An element in a list can be changed:
+                -> variable[index] = "Changed to the item"
+
+            -> You can append an item to your list through:
+                -> name_of_the_list.append("Changed to the item")
+
+            -> You can remove an item from the list through the use of:
+                -> variable.remove("Item")
+
+            -> To insert an item to the front of the list:
+                -> variable.insert(index, "item")
+
+            -> You can sort a list through the use of:
+                -> variable.sort()
+
+            -> You can reverse the list through the use of:
+                -> variable.reverse()
+
+            -> You can clear the list through the use of:
+                -> variable.clear()
+
+            -> To print the index of an element
+                -> print(variable.index("Element/item))
+                -> to find the index of an item not in the list:
+                    ValueError: 'item' not in the list
+
+            -> to find the number of items in a list:
+                -> print(variable.count("item"))
+            
 
     Set:
 
         -> {} unordered and immutable, but ADD/Remove OK.
         -> Duplicates not allowed.
 
+        -> You can't find the indexed element of a set as it is unordered.
+
+        -> To add an item/element: variable.add("item")
+        -> To remove an element: variable.remove("item")
+        -> To remove the first element: variable.pop()
+            -> It is always going to be random as a set is unordered.
+
+        -> To clear the set: variable.clear()
+
     Tuples:
 
         -> () Ordered and unchangeable.
         -> Duplicates allows.
-        -> Faster.
+        -> Faster than lists when its properties are required which are mentioned above.
+
+        -> Made up of parentheses
+
+        -> To find the index of an item:
+            -> print(variable.index("item"))
+
+        -> To Count an item:
+            -> print(variable.count("item"))
 
     Dictionaries:
 
