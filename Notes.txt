@@ -51,7 +51,9 @@ Collections:
 
             -> To insert an item to the front of the list:
                 -> variable.insert(index, "item")
-
+            -> _________.insert(index, element)
+                -> if you want to enter it at the end 
+                of list, you can use the length of the primary list as the inhdex.
             -> You can sort a list through the use of:
                 -> variable.sort()
 
@@ -68,6 +70,17 @@ Collections:
 
             -> to find the number of items in a list:
                 -> print(variable.count("item"))
+
+            -> you can store mixed elements within the same list.
+            -> Even if two different lists contain the same elements the elements will have 
+                the same memory location but the lists themselves won't 
+                have the same location in the memory.
+
+            -> _________.extend(list) can be used to add elements from one list to the primary list.
+            -> NOTE both .append() and .extend can only take one argument.
+                -> You can't pass 2 or more arguments in a list in one go.
+
+            
             
 
     Set:
@@ -138,6 +151,22 @@ Collections:
 
                 -> for key, value in variable.items():
                         print(f"{key}: {value}")
+        -> However, this "use a default value if the key is not in the dictionary" pattern is so common, dictionaries provide the get method to do this:
+        -> val = d.get(key, 'default')
+        -> The first argument to get is the key. If the key is in the dictionary then 
+            the corresponding value is returned, otherwise the second argument to get (here 'default') is returned.
+
+    If you want to copy the key-value pairs from one dictionary to another, Python provides the update method:
+        d1 = {'a': 1, 'b': 5}
+        d2 = {'a': 4, 'c': 6}
+        d1.update(d2)
+        print(d1)
+
+        Output: {'a': 4, 'c': 6, 'b': 5}
+
+​           #Notice that not only does the new key 'c' have the 
+                value 6 from d2, but the value for 'a' has also been updated to the value from d2.  
 
 If I want to check if any of the elements in a certain list is in the Input:
     -> if any(item in list for item in Input): ...
+    -> This condition also works with all instead of any.
