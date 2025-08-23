@@ -53,7 +53,7 @@ Collections:
                 -> variable.insert(index, "item")
             -> _________.insert(index, element)
                 -> if you want to enter it at the end 
-                of list, you can use the length of the primary list as the inhdex.
+                of list, you can use the length of the primary list as the index.
             -> You can sort a list through the use of:
                 -> variable.sort()
 
@@ -64,9 +64,12 @@ Collections:
                 -> variable.clear()
 
             -> To print the index of an element
-                -> print(variable.index("Element/item))
+                -> print(variable.index(Element/item))
                 -> to find the index of an item not in the list:
                     ValueError: 'item' not in the list
+                -> if ________.index(element, start, end)
+                    print the index of the first occurence of the element between
+                    the starting index and ending index. 
 
             -> to find the number of items in a list:
                 -> print(variable.count("item"))
@@ -77,8 +80,11 @@ Collections:
                 have the same location in the memory.
 
             -> _________.extend(list) can be used to add elements from one list to the primary list.
-            -> NOTE both .append() and .extend can only take one argument.
+            -> NOTE both .append() and .extend() can only take one argument.
                 -> You can't pass 2 or more arguments in a list in one go.
+
+            -> ______.copy() - returns a shallow copy of the list which can be assigned to a different
+                variable and operations can be performed. The original list will not be affected.
 
             
             
@@ -102,19 +108,35 @@ Collections:
         -> () Ordered and unchangeable.
         -> Duplicates allows.
         -> Faster than lists when its properties are required which are mentioned above.
-
+        -> Read-Only
         -> Made up of parentheses
-
+        -> Can store mixed values
+        -> Can be created using the class tuple
         -> To find the index of an item:
             -> print(variable.index("item"))
 
         -> To Count an item:
             -> print(variable.count("item"))
 
+        -> Packing and Unpacking
+        -> E.g:
+            -> Tuple_mixed = tuple("John", 25, "Python") -> Packing
+            -> name, age, course = Tuple_mixed -> Unpacking
+
+        -> 2D Data structures:
+        t1 = ([10, 20], [30,40], [50, 60])
+        print(t1[0][0]) will output 10.
+        t1[0][0] = 90 - used to change the specific element.
+            -> This worked because we are changing the element inside the list not the tuple.
+        -> if l1 = [(10, 20), (30, 40), (50, 60)]
+            -> l1[0][0] will be invalid as we are changing the tuple.
+            -> But l1[1] = (300, 400) Is Valid as we are changing the element in List.
+        t1[1] = [900,999] -> Inavlid as tuples are immutable.
+
     Dictionaries:
 
         -> A collection of {key:value} pairs ordered and changeable
-        -> No Duplicates
+        -> No Duplicates in keys.
 
         -> Each key-value pair needs to be seperated by a comma
         
@@ -170,3 +192,211 @@ Collections:
 If I want to check if any of the elements in a certain list is in the Input:
     -> if any(item in list for item in Input): ...
     -> This condition also works with all instead of any.
+    
+Functional Based Programming
+
+    -> Functions - function is a block of code which performs some tasks or Applications
+
+    -> Functions can help break down complex problems into simpler and smaller 
+        manageable tasks
+    
+    -> You can call a function, multiple times, which avoids code repetition
+        and helps you get code reusability
+
+    -> functions syntax
+
+        def function_name():
+            Statements    
+
+    -> Functions With Parameters
+
+        -> This approach allows your functions to take
+            Dynamic inputs 
+        
+    -> Based on arguments passed, we have different types of functions
+
+        -> Positional Arguments 
+        -> Default Arguments  
+        -> Keyword Arguments    
+        -> Arbitrary Positional Arguments (*args)
+        -> Arbitrary Keyword Arguments (**kwargs)
+
+    -> Positional Arguments - The passed arguments to the function, should have 
+        exact order defined in function signature
+
+        -> Here positions will change functionality, if incorrectly used
+
+    -> Default Arguments  - Passing default values as the arguments to the functions
+
+        -> Default values will be overridden by values passed at the function call
+
+        -> Once start adding a default arguments, the next preceding values should be 
+            default only not other types
+
+            # SyntaxError: non-default argument follows default argument
+        
+        -> Keyword Arguments - Arguments are passed by explicitly specifying the
+            name, so function call is based on name of the argument
+
+            -> order doesn't matter anymore, as keys are passed based on names
+
+            -> Improves code readability, and avoids confusion, when we have multiple 
+                Parameters 
+
+            -> Next all the  preceding values should be of same type not other types  
+
+        ->  Arbitrary Positional Arguments (*args)  
+
+            Arbitrary means random / unknown
+
+            -> These functions will accept any number of Positional based arguments
+
+            -> All values will be Collected into a tuple
+
+        -> Arbitrary Keyword Arguments (**kwargs)     
+
+            -> These functions will accept any number of Keyword based arguments
+
+            -> All values will be Collected into a Dictionary
+
+-> Return keywords is used in functions to give 
+    appropriate response when function is called
+
+-> Generally return should be the last Statement, inside
+    the function execution
+
+-> If we are using multiple return Statements sequentially
+    the first return will be executed, not the others
+
+-> You can have multiple return Statements, but the Logic
+    should be appropriate
+
+
+-> Scope Of Variables Within Functions
+
+    -> Scope - where in the code, a variable can be used 
+        or not
+
+    -> Local Scope
+
+        -> A Local variable declared inside a function
+        -> It only exists while the function runs
+        -> You cannot use them outside the function
+
+    -> Global Scope  
+
+        -> A Global variable is declared outside the function
+        -> It can be used anywhere in code, inside or outside
+            functions
+        -> As globals variables can be accessed within Functions
+            and there can be a name conflict, in that case
+            Local variables get first preference inside functions
+        -> You cannot change global variables(read only by default)      
+        -> If you want them to change inside function, then we need
+            to use a special keyword called global
+
+    -> Function Composition
+
+        -> Function calling another function for reusability
+
+-> Types Of Functions
+
+    -> Built In Functions
+
+        -> Functions which are already pre built into python
+
+        -> No need to define them, they are ready to use
+
+            -> print() -> display output
+            -> id() -> display object address
+            -> input() -> take user input
+            -> len() -> number of elements
+            -> max() -> give largest element
+            -> etc
+
+    -> User Defined Functions
+
+        -> Functions that your create by yourself, based on 
+            requirements using def keyword
+  
+
+    -> Lambda Functions (Anonymous Functions)
+
+        -> Lambda functions are One line functions
+
+        -> NOTE - Used only for Single line Expressions
+
+        -> We use lambda keyword, and result of the Expression
+            is automatically returned 
+        
+        -> Mainly used for tasks, when passing a function 
+            as an argument
+
+        -> syntax
+
+            lambda arguments: expression    
+
+            NOTE: arguments cab ne multiple, but only one line expression
+
+        -> IILE - Immediately Invoked Lambda Functions         
+
+-> Core Idea Of Functional Programming
+
+    -> Just like lambda functions, functions that take another function as an argument
+
+    -> We use higher order functions
+
+        -> map
+        -> filter
+        -> reduce
+
+    -> We want to write concise code, without using lengthy code like custom loops
+
+
+    -> map - Used to applying a function on each item in the iterable 
+
+        -> earlier we used some for loop and performed operations
+
+        -> syntax 
+
+            map(function, iterable)
+
+        -> Think of map() as - Do this for every item in the iterable
+
+    
+    -> filter - Used to applying a function on each item in the iterable with a condition
+
+        -> earlier we used some for loop with condition and performed operations
+
+        -> syntax 
+
+            filter(function, iterable)
+        
+         -> Think of filter() as - Keep Only items, where the condition is met
+
+    -> reduce -  used to reduce an iterable to single value, applying the function
+        cumulatively 
+
+            -> syntax 
+
+            reduce(function, iterable)
+
+        -> reduce is a part of module (functools), so we need to import before using it 
+
+
+    -> TASK - Rewrite the LMS DS App with below implementation
+
+        -> if choice == "1":
+            add_student()
+
+        -> if choice == "2":
+            update_student()
+        
+        -> Implement a new option to work a search criteria, where search students 
+            should displayed based if has that skill
+
+            print("4 - List All Students")
+            print("5 - Search")    
+            print("6 - Exit System")  
+
+            -> NOTE - Use lambda based approach 
