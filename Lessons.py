@@ -19,3 +19,25 @@ Objects = [['Mango', 'Banana', 'Apple'], ['Pencil', 'Pen', 'Eraser']] # A 2D arr
 
 #Sub-routine
 
+NUm = int(input('Enter a num: '))
+Num = int(input('Enter a num: '))
+
+def add(num1, num2):
+    Sum = num1 + num2
+    return Sum
+
+Sum1 = add(NUm, Num)
+print(Sum1) # Used for reusability.
+
+#Functions
+# - Returns a value, TO call a function, it is used as part of a sentence.
+
+#Procedure
+# - Doesn't return a value.
+# - print statements
+
+#Parameters:
+# - Holds information on the data required by the subroutine.
+
+# Arguments: Nicknames for parameters
+# - The data passed into the sub-routine.
