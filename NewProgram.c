@@ -27,5 +27,13 @@ int main() {
     printf("%+7.2f\n", price); //+ -> flag, 7 - width, .2 -> decimal points.
 
 
+    //augmented assignment operators
+    int x = 10;
+
+    x += 2;
+    x -= 2;
+    x *= 2;
+    x /= 2;
+
     return 0;
 }
